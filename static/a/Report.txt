@@ -1,0 +1,61 @@
+﻿A long, thin line to divide sections of the document 
+
+OS Assignment 3
+
+
+EdgeOSh: A Home Operating System for Internet of Everything
+
+
+
+
+
+
+SUMMARY BY
+
+
+
+
+
+
+Tanmay Agarwal(34), RegNo. 150911126
+Raghu Tiwari(65), RegNo. RegNo. 150911264
+
+
+
+
+
+
+
+
+
+
+SUMMARY
+ Screen Shot 2017-11-02 at 12.51.38 PM.png 
+
+
+
+This report examines the need for an operating system in a smart home as the current smart home is far from people’s expectations of being called “smart.” The rise in the Internet of Everything and robust and low-cost sensors and chips, from a tube light to a camera to a thermostat, every component of a home could be controlled and sensed in a connected manner. In this case, The operating system might be the last missing piece of the smart home puzzle. To solve this problem using Edge Computing, the concept of  EdgeOSh has been introduced which is a home operating system for the Internet of Everything. With Edge Computing, the devices and services could be connected to a central EdgeOSh. This model manages the devices more easily and efficiently.
+
+
+Computing should happen at the proximity of data sources. With this rationale , the idea of Edge Computing fits perfectly and should be deployed as the computing paradigm for a smart home. EdgeOSh is the bridge to connect the devices at home with the cloud, home occupants and developers. For home occupants, EdgeOSh provides collaboration between home and humans. For the Cloud, EdgeOSh can upstream of downstream data and computing requests on behalf of the devices. For the smart home, EdgeOSh is the brain that manages the devices, data, and services while guaranteeing the privacy and security of the data.
+
+
+Benefits of applying Edge Computing includes, First, network load could be reduced if the data is processed at home rather than uploaded to the Cloud. Second, service response time could be decreased since the computing takes place closer to both data producer and consumer. Third, the data could be protected better from an outsider since most of the raw data will never go out of the home. Compared to conventional computing platforms such as smart phones, PCs, cloud , smart home has its specific characteristics. First, for the PCs and smartphones, the operating system can easily manage all the hardware resources since they are limited by the manufacturer fixed design. However, the home environment is very dynamic, which means the home operating system will face heterogeneous hardware provided by different manufacturers. The dynamic environment brings about new challenges in communication and management. Moreover, the current smart home applications usually work in a silo-based manner rather than attached to a specific operating system. Therefore, how EdgeOSh can manage various combinations of devices and services is still a huge challenge. Second, traditional operating systems are usually resource oriented. In the conventional computing platform, e.g., laptops and mobile devices, the most important responsibility of the operating system is resource management. However, the smart home is a data-oriented environment, which means services in a smart home should interact directly with the data collected by the devices, rather than the resources, or in another word, the specific devices.
+
+
+The design of EdgeOSh includes seven components: Communication Adapter, gets access to devices by the embedded drivers. Event hub is responsible for capturing system events and sending instructions to lower levels. Database is another component in the Data Management layer. As a data-oriented system, EdgeOSh generates large amount of data every day, which contains valuable information related to user preferences and settings. The Event Hub stores data in the Database. Self-Learning Engine creates a learning model. This learning model called the Self-Learning Model acts as an input to the Event Hub to provide decision-making capability. To provide better user experience, the Self-Learning Engine is developed to analyze user behavior, generate the personal model for the user, and help improve the system. Application Programming Interface (API) and Service Registry are located in the upper layers of the system, and are utilized for third-party services. Required by all layers, Name Management helps the system keep devices organized. When a new device is registered with the system, Name Management allocates a name for it using the following rule: location (where), role (who), and data description (what). This rule is complied by all layers. Screen Shot 2017-11-02 at 12.51.08 PM.png 
+
+
+Programming Interface in EdgeOSh. Take as an example, a light with a motion sensor. When a motion is detected, the light turns on. This new light status information is not shared with other devices on the network. To achieve self-management, all the devices and sensors in the domestic environment must be connected and controlled by the EdgeOSh mechanisms. Without a flexible interface, developers would have to put a lot of effort into implementing applications for each different device in a domestic environment. EdgeOSh Programming Interface is a flexible interface, through which devices and services can communicate with each other. This interface will make the task of a developer much easier since it reduces multiple interfaces into one. In this interface, EdgeOSh will manage the collection of data from all devices. The collected data will be stored in tables. A user can then utilize the unified interface to get data and send commands from EdgeOSH.
+Service Quality is one of the key issues that should be addressed in EdgeOSh. Four fundamental features of service quality should be inherited in the smart home system. Differentiation: In the domestic place, there could be multiple services deployed. Moreover, services will have different priorities from the occupants’ point of view. In a smart home, service should be prioritized. A service with a higher priority could interrupt other service and be executed first. Extensibility: In the self management section, idea of extensibility is mentioned. When a system is evaluated, researchers and practitioners want to ask the following questions: Can the new device and service be installed in the system easily? If a device wears out, can it be replaced and can the previous service adopt the replacement easily? Isolation: Isolation should be evaluated in two dimensions. In the vertical dimension, practitioners should test if the service could be isolated from the device. Reliability: Reliability is a fundamental requirement for every computing system, and a smart home is also not an exception. 
+
+
+To support the DEIR service quality requirements, the self-management layer should take five parts into consideration: Device registration: When a new device is added to the home, it calls EdgeOSh for registration. In the registration part, EdgeOSh searches available services for the added device. These available services could be adopted by the same kind of devices or manually arranged by home occupants. Device maintenance: To guarantee that the system works properly, it is important for devices to maintain a healthy status. Given the complexity and structural specificity of EdgeOSH, it is not feasible for occupants to take care of all the devices by themselves.  Device replacement: When a device died or fails, device replacement is aroused. EdgeOSH reports the failure to the occupant and reminds the occupant to do the replacement. Conflict mediation: In any network, service conflicts are likely to occur and a domestic environment is no different. Services are supposed to be isolated from each other. However, this service isolation does not always apply; thus, causing conflicts to arise. Self-involving optimization: By introducing self-management layer to EdgeOSh, the user does not need to reconfigure devices and related services. EdgeOSh will be able to make the addition or replacement process fast and smooth.
+
+
+Security and Privacy in a smart home with EdgeOSH face a lot of challenges as most things in the smart home are resource constrained for the consideration of limited battery life and data storage size, and things are connected to EdgeOSH through diverse wireless connection methods. This makes it very difficult to protect a smart home from attackers.Deployed with IoE, a smart home can generate a lot of privacy information along with sensed usage data. For a smart home, there are three main problems: First is the incomplete community awareness of privacy protection: According to a community research, among the 439 million households using wireless connections, 49% of Wi-Fi networks are unsecured, and 80% of households even still use default passwords on their routers. Second is the ownership of collected home data: For smartphone applications, it is regular to store and analysis user data at service provider side. However, considering the privacy of the data generated at home environment, it will be better to keep this data at home and let the user have full authority to it. Third is currently a potent tool is missing to protect user privacy at the smart home: In EdgeOSH, some of the privacy information could be erased temporarily before processing. For example, IP camera can record video and report abnormal snapshots regularly, masking all the faces in the video. However, not all devices in a smart home have such powerful computational capabilities. Some of the devices and sensors are highly constrained by resource, therefore the privacy-preserving algorithms can only run on EdgeOSH.
+
+
+
+
+In this paper, the authors presented their vision of home operating system and introduced EdgeOSh to the domestic environment. They also listed several functional as well as nonfunctional challenges that should be addressed before the vision could be fulfilled. EdgeOSh can be used as a guidance for prototype practices on smart home systems. This paper can provide helpful information to researchers and practitioners from various disciplines when designing new technologies for smart homes.
